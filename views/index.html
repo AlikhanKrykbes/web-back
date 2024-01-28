@@ -90,7 +90,7 @@
             <div class="card h-100">
               <img src="/public/images/uk.jpg" alt="">
               <div class="card-body">
-                <h3>United Kingdom</h3>
+                <h3>Tour "Big Ben and Old London"</h3>
                 <p>Immerse yourself in the atmosphere of historic London, where every corner is steeped in history. The main jewel is Big Ben, a symbol of resilience and elegance.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -100,7 +100,11 @@
                   <i class="fa-solid fa-star "></i>
                 </div>
                 <h6>Price: <strong>$550</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherLondon">
+                  <h6>Weather in London:</h6>
+                  <p id="temperatureLondon"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -110,7 +114,8 @@
             <div class="card h-100">
               <img src="/public/images/france.jpg" alt="">
               <div class="card-body">
-                <h3>France</h3>
+                <h3>Tour "Eiffel Tower and Romantic Paris"
+                </h3>
                 <p>Feel the spirit of romance as you stroll through the streets of Paris. The pinnacle of romanticism is the Eiffel Tower, towering above the city, creating an unforgettable skyline.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -120,7 +125,11 @@
                   <i class="fa-solid fa-star checked"></i>
                 </div>
                 <h6>Price: <strong>$750</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherParis">
+                  <h6>Weather in Paris:</h6>
+                  <p id="temperatureParis"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -130,7 +139,7 @@
             <div class="card h-100">
               <img src="/public/images/pakistan.jpg" alt="">
               <div class="card-body">
-                <h3>Pakistan</h3>
+                <h3>Tour "Shah Faisal Mosque and Lahore's Culture"</h3>
                 <p>Visit the majestic Shah Faisal Mosque in Karachi and dive into the cultural heritage of Lahore, where every corner is filled with traditions and hospitality.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -140,7 +149,11 @@
                   <i class="fa-solid fa-star "></i>
                 </div>
                 <h6>Price: <strong>$500</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherIslam">
+                  <h6>Weather in Islamabad:</h6>
+                  <p id="temperatureIslam"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -159,7 +172,7 @@
             <div class="card h-100">
               <img src="/public/images/italy.jpg" alt="">
               <div class="card-body">
-                <h3>Italy</h3>
+                <h3>Tour "Mediterranean Sea and Italian Charm"</h3>
                 <p>Italy captivates with its Mediterranean coasts and breathtaking views. Feel the magic of coastal towns and enjoy the endless horizons of the sea.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -169,7 +182,11 @@
                   <i class="fa-solid fa-star "></i>
                 </div>
                 <h6>Price: <strong>$600</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherRome">
+                  <h6>Weather in Rome:</h6>
+                  <p id="temperatureRome"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -179,7 +196,8 @@
             <div class="card h-100">
               <img src="/public/images/india.jpg" alt="">
               <div class="card-body">
-                <h3>India</h3>
+                <h3>Tour "Taj Mahal and India's Cultural Treasures"
+                </h3>
                 <p>Pay homage to the splendor of the Taj Mahal in Agra and immerse yourself in India's cultural richness. Explore ancient temples, vibrant bazaars, and amazing festivals.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -189,7 +207,11 @@
                   <i class="fa-solid fa-star "></i>
                 </div>
                 <h6>Price: <strong>$450</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherAgra">
+                  <h6>Weather in Agra:</h6>
+                  <p id="temperatureAgra"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -199,7 +221,7 @@
             <div class="card h-100">
               <img src="/public/images/US.jpg" alt="">
               <div class="card-body">
-                <h3>United States</h3>
+                <h3>Tour "Statue of Liberty and Great Lakes"</h3>
                 <p>Immerse yourself in the spirit of freedom standing before the Statue of Liberty in New York. Then, head to the Great Lakes to enjoy the beauty of nature and the vast waters.</p>
                 <div class="star">
                   <i class="fa-solid fa-star checked"></i>
@@ -209,7 +231,11 @@
                   <i class="fa-solid fa-star checked"></i>
                 </div>
                 <h6>Price: <strong>$1000</strong></h6>
-                <a href="#book">Book Now</a>
+                <div id="weatherNY">
+                  <h6>Weather in New York:</h6>
+                  <p id="temperatureNY"></p>
+              </div>
+                <a href="book">Book Now</a>
               </div>
             </div>
 
@@ -253,13 +279,6 @@
     </section>
     <!-- About End -->
 
-
-
-
-
-
-
-
     <!-- Footer Start -->
     <footer id="footer">
       <h1><span>T</span>ravel</h1>
@@ -278,16 +297,107 @@
     </footer>
     <!-- Footer End -->
 
-
-
-
-
-
-
-    
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      async function getWeather() {
+  try {
+    const response = await fetch('/weather?city=London');
+    const data = await response.json();
 
+    document.getElementById('weatherLondon').innerHTML = `
+      <h6>Weather in London:</h6>
+      <p id="temperatureLondon">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    
+  }
+}
+
+async function getWeather2() {
+  try {
+    const response= await fetch('/weather2?city=Paris');
+    const data = await response.json();
+
+    document.getElementById('weatherParis').innerHTML = `
+      <h6>Weather in Paris:</h6>
+      <p id="temperatureParis">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+   
+  }
+}
+
+async function getWeather3() {
+  try {
+    const response = await fetch('/weather3?city=Islamabad');
+    const data = await response.json();
+
+    document.getElementById('weatherIslam').innerHTML = `
+      <h6>Weather in Islamabad:</h6>
+      <p id="temperatureIslam">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    
+  }
+}
+
+async function getWeather4() {
+  try {
+    const response = await fetch('/weather4?city=Rome');
+    const data = await response.json();
+
+    document.getElementById('weatherRome').innerHTML = `
+      <h6>Weather in Rome:</h6>
+      <p id="temperatureRome">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    
+  }
+}
+
+async function getWeather5() {
+  try {
+    const response = await fetch('/weather5?city=Agra');
+    const data = await response.json();
+
+    document.getElementById('weatherAgra').innerHTML = `
+      <h6>Weather in Agra:</h6>
+      <p id="temperatureAgra">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    
+  }
+}
+
+async function getWeather6() {
+  try {
+    const response = await fetch('/weather6?city=Washington'); // Corrected city name
+    const data = await response.json();
+
+    document.getElementById('weatherNY').innerHTML = `
+      <h6>Weather in New York:</h6>
+      <p id="temperatureNY">${data.temperature}°C</p>
+    `;
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  getWeather();
+  getWeather2();
+  getWeather3();
+  getWeather4();
+  getWeather5();
+  getWeather6();
+});
+
+  </script>
 </body>
 </html>
