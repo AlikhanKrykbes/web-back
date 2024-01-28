@@ -64,17 +64,18 @@
             </div>
   
             <div class="col-md-6 py-3 py-md-0">
-              <form action="#">
+              <form id="bookingForm" method="post">
                 
-                <input type="text" class="form-control" placeholder="Where To" required><br>
+                <input type="text" class="form-control" placeholder="Where To" name="destination" required><br>
                 <input type="number" id="adults" name="adults" class="form-control" placeholder="Adults" required><br>
-<input type="number" id="children" name="children" class="form-control" placeholder="Children" required><br>
-                <input type="date" class="form-control" placeholder="Arrivals" required><br>
-                <input type="date" class="form-control" placeholder="Leaving" required><br>
+                <input type="number" id="children" name="children" class="form-control" placeholder="Children" required><br>
+                <input type="date" class="form-control" placeholder="Arrivals" name="arrivalDate" required><br>
+                <input type="date" class="form-control" placeholder="Leaving" name="departureDate" required><br>
                 <textarea class="form-control" rows="5" name="text" placeholder="Enter Your Name & Details"></textarea>
+                
                 <input type="submit" value="Book Now" class="submit" required>
-  
-              </form>
+            </form>
+            
             </div>
   
           </div>
@@ -98,4 +99,32 @@
         </div>
       </footer>
       <!-- Footer End -->
+  <script>
+     document.getElementById('bookingForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        submitForm();
+    });
+
+    function submitForm() {
+        
+        const formData = new FormData(document.getElementById('bookingForm'));
+
+        
+        fetch('/book/submit', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Tour successfully booked!');
+            } else {
+                alert('Error booking the tour.');
+            }
+        })
+        .catch(error => {
+            console.error('Error making the request:', error);
+        });
+    }
+  </script>
 </body>
