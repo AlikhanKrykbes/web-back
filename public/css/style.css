@@ -317,3 +317,10 @@
     background: #ffa500;
 }
 /* Footer End */
+#register-card {
+    display: none;
+}
+
+#register-card.active {
+    display: block;
+}
